@@ -2,9 +2,15 @@
     box-sizing: border-box;
 }
   
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #131720;
     font-family: sans-serif;
+    padding-top: 90px;
 }
 
 h3 {
@@ -12,25 +18,31 @@ h3 {
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #131720;
+    position: fixed;
+    background-color: #0f121a;
     padding: 10px;
+    margin: 0;
+    top: 0;                
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .topnav a {
-    float: left;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 7px 16px;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: Fantasy;
     text-transform: uppercase;
 }
 
 .search-container {
-    float: right;
     padding: 10px;
 }
 
@@ -52,6 +64,10 @@ input {
     padding: 9px 11px;
 }
 
+input:focus::placeholder {
+    opacity: 0;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -64,6 +80,10 @@ input:-webkit-autofill:active {
     border-radius: 13px;
 }
 
+#section {
+    margin: 7px;
+}
+
 .column {
     float: left;
     width: 25%;
@@ -71,6 +91,7 @@ input:-webkit-autofill:active {
 }
 
 .card {
+    overflow: hidden;
     border-radius: 19px;
     padding: 15px;
     text-align: center;
@@ -93,6 +114,7 @@ input:-webkit-autofill:active {
 @media screen and (max-width: 1420px) {
     .thumbnail {
         width: 100%;
+        height: 80%;
     }
 }
 
@@ -103,16 +125,20 @@ input:-webkit-autofill:active {
 
     .thumbnail {
         width: 100%;
-        height: auto;
+        height: 80%;
     }
 
     .card {
-        height: auto;
+        height: 400px;
         padding: 20px;
     }
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        padding-top: 135px;
+    }
+
     .topnav {
         flex-direction: column;
         align-items: center;
@@ -153,7 +179,7 @@ input:-webkit-autofill:active {
 
 @media screen and (max-width: 480px) {
     .topnav a {
-        font-size: 1.5rem;
+        font-size: 2.0rem;
     }
 
     .search-container {
@@ -167,10 +193,15 @@ input:-webkit-autofill:active {
 
     .card {
         padding: 10px;
+        height: 350px;
     }
 
     .thumbnail {
         width: 100%;
-        height: auto;
+        height: 75%;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 }
