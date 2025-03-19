@@ -52,10 +52,16 @@ input {
     padding: 9px 11px;
 }
 
-.thumbnail {
-    height: 350px;
-    width: 300px;
-    border-radius: 20px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: #151f30 !important;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    box-shadow: 0 0 0px 1000px #151f30 inset !important;
+    height: 45px;
+    border-radius: 13px;
 }
 
 .column {
@@ -69,5 +75,17 @@ input {
     padding: 15px;
     text-align: center;
     background-color: #151f30;
+    height: 445px;
+    justify-content: center;
+    transition: transform 0.15s ease-in-out;
 }
 
+.card:hover {
+    transform: scale(1.025);
+}
+
+.thumbnail {
+    height: 350px;
+    width: 300px;
+    border-radius: 20px;
+}
