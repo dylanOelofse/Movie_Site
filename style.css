@@ -89,3 +89,88 @@ input:-webkit-autofill:active {
     width: 300px;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 1420px) {
+    .thumbnail {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .column {
+        width: 33.3%;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .topnav a {
+        float: none;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .column {
+        width: 50%;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        height: auto;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .topnav a {
+        font-size: 1.2rem;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: auto;
+    }
+}
