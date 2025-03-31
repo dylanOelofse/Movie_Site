@@ -38,7 +38,7 @@ h3 {
     padding: 7px 16px;
     text-decoration: none;
     font-size: 3rem;
-    font-family: Fantasy;
+    font-family: 'Impact', sans-serif;
     text-transform: uppercase;
 }
 
@@ -148,7 +148,7 @@ input:-webkit-autofill:active {
 
     .topnav a {
         float: none;
-        font-size: 1.8rem;
+        font-size: 2.3rem;
         text-align: center;
     }
 
