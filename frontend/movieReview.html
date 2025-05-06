@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Site</title>
+    <link rel="stylesheet" href="styleReview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="nav-left">
+            <a class="active" id="backArrow" href="index.html" onclick="storeSearchQuery()">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    
+        <div class="page-title-container">
+            <div class="movie-title">
+                <h3 id="ReviewsH1">Reviews for:</h3>
+                <h1 id="title">Movie Title</h1>
+            </div>
+            <img id="image" class="movie-thumbnail">
+        </div>
+    </div>
+    
+    <div id="section-container">
+        <section id="section">
+            <!-- New review card will be injected here -->
+        </section>
+        
+        <section id="section2">
+            <!-- Reviews cards will be prepended here -->
+        </section>
+    </div>
+
+    <div id="customDialog" class="dialog-overlay dialog-hidden">
+        <div class="dialog-box">
+          <p id="dialogMessage">You're already editing a review.</p>
+          <button onclick="closeDialog()">OK</button>
+        </div>
+    </div>
+      
+    <div id="confirmationDialog" class="dialog-overlay dialog-hidden">
+        <div class="dialog-box">
+          <p id="confirmationMessage">Are you sure?</p>
+          <div style="display: flex; justify-content: center; gap: 10px;">
+            <button onclick="confirmDialog(true)">Yes</button>
+            <button onclick="confirmDialog(false)">No</button>
+          </div>
+        </div>
+    </div>
+      
+    
+</body>
+
+<script src="movieReview.js"></script>
+
+</html>

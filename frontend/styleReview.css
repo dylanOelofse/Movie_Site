@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131720;
+    font-family: sans-serif;
+}
+
+.topnav {
+    position: fixed;
+    background-color: #0f121a;
+    padding: 20px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-left {
+    position: absolute;
+    left: 25px;
+}
+
+#backArrow{
+    font-size: 4rem;
+    color: white; 
+    text-decoration: none;
+}
+
+.page-title-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 0 90px;
+}
+
+#section-container {
+    margin: 7px;
+}
+
+#ReviewsH1 {
+    margin: 0;
+    padding-bottom: 15px;
+    color: white;
+    font-weight: 800;
+}
+
+#title {
+    margin: 0;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 1000;
+}
+
+.movie-thumbnail {
+    height: 170px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.saveButton {
+    all: unset;
+    cursor: pointer;
+}
+
+.editButton {
+    all: unset;
+    cursor: pointer;
+}
+
+.deleteButton {
+    all: unset;
+    cursor: pointer;
+}
+
+.interact-buttons {
+    position: absolute;
+    bottom: 4px;
+    right: 7%;
+}
+
+.newReviewTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 4%;
+}
+
+.inputTitles {
+    margin-bottom: 7px;
+    color: white;
+}
+
+#new_user {
+    all: unset;
+    color: white;
+    padding: 6px 0;
+    width: 90%;
+}
+
+#new_user:-webkit-autofill,
+#new_user:-webkit-autofill:hover,
+#new_user:-webkit-autofill:focus,
+#new_user:-webkit-autofill:active {
+    display: none;
+}
+
+.newUserForm {
+    background-color: #131720;
+    border-radius: 13px;
+    height: 30px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#new_review {
+    all: unset;
+    padding-top: 8px;
+    color: white;
+    padding: 6px 0;
+    width: 90%;
+    height: 50px;
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#new_review::-webkit-scrollbar {
+    display: none; 
+}
+
+.newReviewForm {
+    background-color: #131720;
+    border-radius: 13px;
+    height: 68px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+
+.card {
+    border-radius: 19px;
+    padding: 15px;
+    text-align: center;
+    background-color: #151f30;
+    height: 280px;
+    justify-content: center;
+    transition: transform 0.15s ease-in-out;
+    position: relative;
+}
+
+.reviewUser {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 5.5%;
+}
+
+.review {
+    color: white;
+    font-size: 1.2rem;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.userBlock {
+    position: sticky;
+    background-color: #151f30;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.reviewBlock {
+    display: flex;    
+    justify-content: center;
+    padding: 2px;
+    padding-top: 5.5px;
+    background-color: #151f30;
+    border-radius: 8px;
+    width: 96%;
+    height: 60%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    z-index: 0;   
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.reviewBlock::-webkit-scrollbar {
+    display: none; 
+}
+
+.editReviewUser {
+    all: unset;
+    color: white;
+    padding: 6px 0;
+    width: 90%;
+}
+
+.editReviewText {
+    all: unset;
+    padding-top: 8px;
+    color: white;
+    padding: 6px 0;
+    width: 90%;
+    height: 50px;
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.edit-backArrow {
+    all: unset;
+    color: white;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+.card:hover {
+    transform: scale(1.025);
+}
+
+.dialog-hidden {
+    display: none !important; 
+}
+  
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dialog-box {
+    background: #323e53;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 300px;
+}
+  
+.dialog-box p {
+    color: white;
+    margin-bottom: 15px;
+}
+  
+.dialog-box button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #151a26;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+.dialog-box button:hover {
+    background-color: #1c2940;
+}
+  
+
+@media screen and (max-width: 1420px) { 
+    #title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .column {
+        width: 33.3%;
+    }
+
+    .movie-thumbnail {
+        width: 150px;
+    }
+
+    .card {
+        height: 290px;
+        padding: 20px;
+    }
+
+    #ReviewsH1 {
+        font-size: 1rem;
+    }
+
+    #title {
+        font-size: 2.3rem;
+    }
+
+    #backArrow{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        width: 50%;
+    }
+
+    .movie-thumbnail {
+        width: 160px;
+    }
+
+    .card {
+        height: 280px;
+        padding: 10px;
+    }
+
+    #backArrow{
+        font-size: 2.7rem;
+    }
+
+    .newUserForm {
+        width: 90%;
+    }
+
+    .newReviewForm {
+        width: 90%;
+    }
+
+    .nav-left {
+        top: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .column {
+        width: 50%;
+        padding: 5px;
+    }
+
+    .card {
+        padding: 10px;
+        height: 280px;
+    }
+
+    .movie-thumbnail {
+        width: 150px;
+    }
+
+    #ReviewsH1 {
+        font-size: 0.8rem;
+    }
+
+    #title {
+        font-size: 1.5
+        rem;
+    }
+
+    #backArrow{
+        font-size: 1.5rem;
+    }
+
+    .review {
+        font-size: 1.05rem;
+    }
+}
