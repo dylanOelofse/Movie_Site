@@ -368,7 +368,8 @@ body {
     }
 
     .movie-thumbnail {
-        width: 150px;
+        width: 100px;
+        height: 160px
     }
 
     #ReviewsH1 {
