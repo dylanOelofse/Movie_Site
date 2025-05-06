@@ -205,7 +205,7 @@ body {
     scrollbar-width: none; 
     -ms-overflow-style: none; 
     z-index: 0;   
-
+    /*fading scrolling top and bottom border for reviews*/
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
     mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
