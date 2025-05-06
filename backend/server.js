@@ -3,7 +3,7 @@
 
 import express from "express";
 import cors from "cors";
-import path from "path";
+import path from 'path';
 import { fileURLToPath } from 'url';
 import reviews from "./api/reviews.route.js";
 
@@ -21,11 +21,11 @@ app.use(express.json());
 // API routes
 app.use("/api/v1/reviews", reviews);
 
-// Serve index.html for root route
+// Serve index.html for root route (for render)
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 app.use("*", (req, res) => res.status(404).json({ error: "Not found." }));
 
-export default app;
+export default app; 

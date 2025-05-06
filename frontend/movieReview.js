@@ -3,7 +3,15 @@ const movieId = url.searchParams.get("id");
 const movieTitle = url.searchParams.get("title");
 const movieImage = url.searchParams.get("image");
 
-const APILINK = 'http://localhost:8000/api/v1/reviews/';  
+let APILINK = '';
+
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  // Running locally (localhost OR 127.0.0.1)
+  APILINK = 'http://localhost:8000/api/v1/reviews/';
+} else {
+  // In production (on Render etc)
+  APILINK = window.location.origin + '/api/v1/reviews/';
+}
 
 const main = document.getElementById("section");
 const main2 = document.getElementById("section2");
